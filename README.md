@@ -21,8 +21,11 @@ I decided to break this up into 3 parts just to kinda walk you, or anyone, throu
 the build process:
 
 The three parts are broken down into:
+
 Part 1: Vagrant
+
 Part 2: Containers
+
 Part 3: Monitoring 
 
 
