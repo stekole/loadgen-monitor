@@ -4,7 +4,7 @@ A vagrant instance running a load generator and a container monitor (c-advisor)
 Author: Stefan Kolesnikowicz 
 
 
-##Setup:
+## Setup:
 
     Host: Mac osx 
     Hypervisor: Virtualbox Version 5.0.24 r108355
@@ -14,7 +14,7 @@ Author: Stefan Kolesnikowicz
     Docker Version : docker.x86 1.12.6-32.git88a4867.el7.centos                               
 
 
-##Introduction
+## Introduction
 
 
 I decided to break this up into 3 parts just to kinda walk you, or anyone, through 
@@ -26,7 +26,7 @@ Part 2: Containers
 Part 3: Monitoring 
 
 
-##Part 1 - Vagrant
+## Part 1 - Vagrant
 
 
     git clone https://github.com/stekole/vagrant-box
@@ -46,7 +46,7 @@ You should see something similar to the following if everything was successful:
 
 
 
-##Part 2 - Containers
+## Part 2 - Containers
 
 
 Please login to your vagrant instance now using the vagrant ssh command:
@@ -73,7 +73,7 @@ Check if it is running with
     sudo docker ps 
 
 
-##Part 3 - Monitoring
+## Part 3 - Monitoring
 
 
 Utilizing an opensource solution, I decided to choose cadvisor as it is small/reliable and can be quickly setup. A simple container as we are not doing anything very complicated in scale (and just in vagrant). 
@@ -90,6 +90,6 @@ You are able to use your desktop machine hypervisor on port 4444
 
 
 
-##Closing
+## Closing
 
 This of course can be even more automated, but I felt this was a good breakdown to display the steps I took to get to the complete application. Other improvements? Well 
