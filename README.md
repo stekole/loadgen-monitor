@@ -92,6 +92,8 @@ You are able to use your desktop machine hypervisor on port 4444
     
     http://localhost:4444/containers/
 
+Individual containers can be viewed by clicking the top link on the url above or visiting the following link:
 
+    http://localhost:4444/docker/
 
 
