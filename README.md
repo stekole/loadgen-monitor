@@ -17,7 +17,7 @@ Author: Stefan Kolesnikowicz
 ## Introduction
 
 
-I decided to break this up into 3 parts just to kinda walk you, or anyone, through 
+This project is broken down into three parts just to walk you, or anyone, through 
 the build process:
 
 The three parts are broken down into:
@@ -30,7 +30,9 @@ Part 3: Monitoring
 
 
 ## Part 1 - Vagrant
+This section you will be setting up your "hypervisor" which will be running your containers. 
 
+First close the vagrant repo to pull a bare vagrant box with cloud-init running
 
     git clone https://github.com/stekole/vagrant-box
 
@@ -40,7 +42,7 @@ Part 3: Monitoring
 Wait until the server is provisioned 
 
 
-You should see something similar to the following if everything was successful:
+You should see the following if everything was successful:
 
     hypervisor.local: + touch /opt/.vagrant_provision_success
     hypervisor.local: + service docker start
@@ -48,15 +50,14 @@ You should see something similar to the following if everything was successful:
     hypervisor.local: + exit 0
 
 
-
 ## Part 2 - Containers
+Building a container running a simple load generator script. 
 
-
-Please login to your vagrant instance now using the vagrant ssh command:
+Login to your vagrant instance now using the vagrant ssh command:
     
     vagrant ssh 
    
-lets pull down the code for our load generator:
+Pull down the Dockerfile for our load generator:
     
     git clone https://github.com/stekole/docker-loadgenerator &&   cd docker-loadgenerator 
 
@@ -76,7 +77,7 @@ Check if it is running with
     sudo docker ps 
 
 
-## Part 3 - Monitoring
+## Part 3 - Monitoring (Container B)
 
 
 Utilizing an opensource solution, I decided to choose cadvisor as it is small/reliable and can be quickly setup. A simple container as we are not doing anything very complicated in scale (and just in vagrant). 
@@ -93,6 +94,4 @@ You are able to use your desktop machine hypervisor on port 4444
 
 
 
-## Closing
 
-This of course can be even more automated, but I felt this was a good breakdown to display the steps I took to get to the complete application. Other improvements? Well 
